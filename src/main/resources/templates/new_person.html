@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>Nowa osoba</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h3>Wprowadź dane nowej osoby</h3>
+        <form action='#' th:action="@{/person/save}" th:object="${Person}" method="post">
+            <p>Imie: <input type='text' th:field="*{firstName}" /></p>
+            <p>Nazwisko: <input type='text' th:field="*{lastName}" /></p>
+            <p>Wiek: <input type='text' th:field="*{age}" /></p>
+            <p><input type="submit" value="Wyślij"/> <input type="reset" value="Wyczyść"/></p>
+        </form>
+    </body>
+</html>
